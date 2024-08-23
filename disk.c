@@ -4,7 +4,7 @@
 int fcfs(int n);
 int scan(int n);
 int cscan(int n);
-void main(){
+int main(){
 	int k = 1, choice, n;
 	while (k == 1){
 		printf("Disk Scheduling Algorithms\n1.FCFS\n2.SCAN\n3.C-SCAN\n4.Exit\nEnter an option: ");
@@ -31,6 +31,7 @@ void main(){
 				printf("Enter a valid option.\n");
 		}
 	}
+	return 0;
 }
 
 int fcfs(int n){
