@@ -20,9 +20,9 @@ void main() {
     }
     printf("\n");
 
-    do {
-        fscanf(oc, "%s", line);
+    fscanf(oc, "%s", line);  // Initial read for the while loop
 
+    while (!feof(oc)) {
         if (line[0] == 'T') {
             for (i = 0; i < 6; i++) {
                 arr[i] = line[i + 2];
@@ -44,7 +44,8 @@ void main() {
             break;
         }
 
-    } while (!feof(oc));
+        fscanf(oc, "%s", line);  // Read the next line at the end of the loop
+    }
 
     fclose(oc);
 }
